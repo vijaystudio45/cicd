@@ -16,8 +16,12 @@ jobs:
       uses: actions/setup-python@v4.2.0
       with:
        python-version: '3.10' 
+       
+    - name: Checkout code
+      uses: actions/checkout@v2      
 
     - name: Install Dependencies
       run: |
-        mkdir www
+        pip install -r requirements.txt
+    
     
