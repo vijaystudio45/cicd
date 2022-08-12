@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
    
     steps:
+    - name: Setup Python
+      uses: actions/setup-python@v4.2.0
+
     - name: Install Dependencies
       run: |
         mkdir www
