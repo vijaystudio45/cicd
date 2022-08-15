@@ -13,6 +13,11 @@ jobs:
    
     steps:
 
+     - name: Install doctl
+       uses: digitalocean/action-doctl@v2
+       with:
+        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
      - name: Setup Python
        uses: actions/setup-python@v4.2.0
        with:
